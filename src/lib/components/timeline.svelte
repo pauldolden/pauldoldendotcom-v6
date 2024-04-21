@@ -8,17 +8,13 @@
 			class="mb-10 md:p-5 md:mb-5 cursor-pointer flex flex-col gap-6 rounded-md hover:bg-surface-100-800-token transition-colors ease-in-out"
 		>
 			<a href={job.url} target="_blank">
-				<p class="text-2xl font-teko text-primary-400">{job.duration}</p>
-				<div class="flex flex-col gap-3">
-					<header class="flex items-center justify-between">
-						<h2 class="text-xl font-bold">{job.title}</h2>
+				<p class="text-2xl font-teko text-primary-400 mb-3">{job.duration}</p>
+				<div class="flex flex-col gap-5">
+					<header class="flex items-center gap-5">
+						<img src={job.image} alt={job.company} class="h-10" />
+						<p class="text-xl font-bold">{job.company}</p>
 					</header>
-					<div class="flex gap-5 items-center">
-						{#if job.image}
-							<img src={job.image} alt={job.company} class="h-10" />
-						{/if}
-						<p class="text-xl mt-2">{job.company}</p>
-					</div>
+					<h2 class="text-xl font-bold">{job.title}</h2>
 					<p class="mt-2 text-sm md:text-l">{job.description}</p>
 				</div>
 			</a>

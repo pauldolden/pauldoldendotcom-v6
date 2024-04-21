@@ -4,7 +4,7 @@ type Job = {
 	location: string;
 	duration: string;
 	description: string;
-	image?: string;
+	image: string;
 	url: string;
 	tools: Tool[];
 };
