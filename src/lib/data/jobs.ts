@@ -17,7 +17,7 @@ type Tool = {
 export const jobs: Job[] = [
 	{
 		title: 'Senior Full-Stack Developer',
-		company: 'The FA',
+		company: 'The Football Association',
 		location: 'Wembley Stadium, London',
 		duration: 'Aug 2023 - Present',
 		description: 'Working for England Teams',
