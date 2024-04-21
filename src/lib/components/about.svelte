@@ -1,7 +1,7 @@
 <div class="flex flex-col gap-10">
 	<div class="flex flex-col gap-1">
-		<h1 class="font-bold font-teko text-7xl text-primary-500">Paul Dolden</h1>
-		<h2 class="font-medium font-teko text-5xl">Senior Software Developer</h2>
+		<h1 class="font-bold font-teko text-5xl md:text-7xl text-primary-500">Paul Dolden</h1>
+		<h2 class="font-medium font-teko text-4xl md:text-5xl">Senior Software Developer</h2>
 	</div>
 	<div class="flex flex-col gap-4">
 		<p class="text-sm md:text-l">

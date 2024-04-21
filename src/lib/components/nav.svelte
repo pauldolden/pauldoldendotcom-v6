@@ -1,9 +1,11 @@
 <script lang="ts">
 </script>
 
-<div class="px-4 py-4 flex place-items-center justify-center bg-surface-700 font-bold text-center">
-	This site is in active development and there is a good chance it's completely broken. Don't sweat
-	it.
+<div
+	class="px-4 py-4 flex text-xs place-items-center justify-center bg-surface-700 font-light text-center"
+>
+	This site is always in active development and there is a good chance it's completely broken. Don't
+	sweat it.
 </div>
 <header class="flex justify-center md:justify-end px-10 py-10">
 	<nav>

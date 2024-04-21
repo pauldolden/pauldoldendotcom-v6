@@ -23,7 +23,13 @@
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 </script>
 
-<main class="h-screen md:overflow-hidden text-gray-200">
+<svelte:head>
+	<title>Paul Dolden | Senior Software Engineer</title>
+	<meta name="description" content="Paul Dolden | Senior Software Engineer" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/png" href="/favicon.png" />
+</svelte:head>
+<main class="md:h-screen pb-10 md:overflow-hidden text-gray-200">
 	<Nav />
 	<slot />
 </main>

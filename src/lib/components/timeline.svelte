@@ -13,7 +13,12 @@
 					<header class="flex items-center justify-between">
 						<h2 class="text-xl font-bold">{job.title}</h2>
 					</header>
-					<p class="text-xl mt-2">{job.company}</p>
+					<div class="flex gap-5 items-center">
+						{#if job.image}
+							<img src={job.image} alt={job.company} class="h-10" />
+						{/if}
+						<p class="text-xl mt-2">{job.company}</p>
+					</div>
 					<p class="mt-2 text-sm md:text-l">{job.description}</p>
 				</div>
 			</a>
