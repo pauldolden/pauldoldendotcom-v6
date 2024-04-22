@@ -4,9 +4,7 @@
 
 <div class="overflow-y-scroll pb-10">
 	{#each jobs as job}
-		<article
-			class="mb-10 md:p-5 md:mb-5 cursor-pointer flex flex-col gap-6 bg-surface-100-800-token"
-		>
+		<article class="mb-10 p-5 md:mb-5 cursor-pointer flex flex-col gap-6 bg-surface-100-800-token">
 			<a href={job.url} target="_blank">
 				<p class="text-2xl font-teko text-primary-500 mb-3">{job.duration}</p>
 				<div class="flex flex-col gap-5">
