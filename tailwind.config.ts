@@ -21,8 +21,7 @@ export default {
 				typescript: '#3078C6'
 			},
 			fontFamily: {
-				teko: ['Teko', 'sans-serif'],
-				ubuntu: ['Ubuntu', 'sans-serif']
+				jbm: ['JetBrainsMono', 'monospace']
 			}
 		}
 	},

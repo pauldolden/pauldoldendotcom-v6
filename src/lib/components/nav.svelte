@@ -1,20 +1,16 @@
 <script lang="ts">
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 </script>
 
-<div
-	class="px-4 py-4 flex text-xs place-items-center justify-center bg-surface-700 font-light text-center"
->
-	This site is always in active development, so there is a good chance it's completely broken. Don't
-	sweat it.
-</div>
-<header class="flex justify-center md:justify-end px-10 py-10">
+<header class="flex justify-between px-10 py-10">
+	<LightSwitch />
 	<nav>
 		<ul class="flex gap-10">
 			<li>
 				<a href="https://github.com/pauldolden" target="_blank"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
-						class="w-7 md:w-10 fill-gray-400 hover:fill-primary-400 transition-colors duration-300 ease-in-out"
+						class="w-7 md:w-10 fill-primary-500 hover:fill-primary-400 transition-colors duration-300 ease-in-out"
 						viewBox="0 0 496 512"
 						><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><title
 							>GitHub</title
@@ -29,7 +25,7 @@
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 448 512"
-						class="w-7 md:w-10 fill-gray-400 hover:fill-primary-400 transition-colors duration-300 ease-in-out"
+						class="w-7 md:w-10 fill-primary-500 transition-colors duration-300 ease-in-out"
 						><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><title
 							>LinkedIn</title
 						><path

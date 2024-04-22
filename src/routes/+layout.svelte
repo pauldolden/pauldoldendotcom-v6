@@ -24,12 +24,12 @@
 </script>
 
 <svelte:head>
-	<title>Paul Dolden | Senior Software Engineer</title>
-	<meta name="description" content="Paul Dolden | Senior Software Engineer" />
+	<title>paul dolden | senior software engineer</title>
+	<meta name="description" content="paul dolden | senior software engineer" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/png" href="/favicon.png" />
 </svelte:head>
-<main class="md:h-screen pb-10 md:overflow-hidden text-gray-200">
+<main class="md:h-screen pb-20 md:overflow-hidden text-surface-900-50-token font-jbm">
 	<Nav />
 	<slot />
 </main>
