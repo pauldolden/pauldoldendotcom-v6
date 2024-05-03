@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import { pdTheme } from './theme';
+import { terminal } from './theme';
 
 export default {
 	darkMode: 'class',
@@ -14,11 +14,12 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				thefa: '#011e41',
-				svelte: '#f96743',
-				tailwind: '#06B6D4',
-				go: '#79D4FD',
-				typescript: '#3078C6'
+				tmux: '#1CB920',
+				pWhite: '#BECAF9',
+				pBlue: '#5ED2FF',
+				pPurp: '#C198FD',
+				pGreen: '#90D05A',
+				pRed: '#FF6C8D'
 			},
 			fontFamily: {
 				jbm: ['JetBrainsMono', 'monospace']
@@ -30,7 +31,7 @@ export default {
 		typography,
 		skeleton({
 			themes: {
-				custom: [pdTheme]
+				custom: [terminal]
 			}
 		})
 	]
