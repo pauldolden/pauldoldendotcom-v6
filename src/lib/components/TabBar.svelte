@@ -12,7 +12,7 @@
 <section class="bg-tmux flex text-surface-900 justify-between px-1">
 	<div class="flex gap-4">
 		<div>[0]</div>
-		<nav class="flex gap-3">
+		<nav class="flex md:flex-row flex-wrap gap-3">
 			{#each $tabs as tab, index}
 				<button class="tab" on:click={() => ($activeTab = index)}>
 					{index}:{tab}{index === $activeTab ? '*' : ''}
@@ -20,7 +20,7 @@
 			{/each}
 		</nav>
 	</div>
-	<div class="flex gap-3">
+	<div class="hidden gap-3 md:flex">
 		<p>"pauldolden.com"</p>
 		<p>{formattedDate}</p>
 	</div>

@@ -10,7 +10,7 @@ export const history = writable<string[]>([]);
 export const stdOut = writable<TabStdOut[]>([
   {
     index: 0,
-    commands: []
+    commands: ['development', 'home', 'about', 'experience']
   }
 ]);
 // Derived store that returns the current tab stdOut

@@ -29,11 +29,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" type="image/png" href="/favicon.png" />
 </svelte:head>
-<main class="md:h-screen md:overflow-scroll flex flex-col text-pWhite font-jbm">
-	<StdOut>
-		<slot />
-	</StdOut>
-	<Prompt />
-	<TabBar />
-	<KeyBoardEvents />
+
+<!-- Main container with full screen height and appropriate overflow handling -->
+<main class="h-screen flex flex-col overflow-hidden">
+	<!-- Scrollable StdOut section with explicit height control -->
+	<section id="stdOut" class="flex-1 overflow-auto text-white font-jbm">
+		<StdOut>
+			<slot />
+		</StdOut>
+	</section>
+
+	<!-- Fixed bottom section with Prompt and TabBar -->
+	<section class="text-white font-jbm">
+		<Prompt />
+		<TabBar />
+	</section>
 </main>
+
+<KeyBoardEvents />

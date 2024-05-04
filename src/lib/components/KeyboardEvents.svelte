@@ -26,6 +26,9 @@
 	}
 
 	function handleEnter() {
+		if ($promptText === '') return;
+		// scroll to the bottom of stdOut
+
 		history.update((h) => [$promptText, ...h]);
 		// update the current tab's stdOut
 		stdOut.update((currentStdOut) => {
@@ -36,7 +39,6 @@
 
 		// Accepted Commands go here
 		if ($promptText === 'clear') {
-			console.log('clearing');
 			const index = $currentStdOut.index;
 			stdOut.update((currentStdOut) => {
 				currentStdOut[index].commands = [];
@@ -45,6 +47,15 @@
 		}
 
 		if ($promptText === 'exit') {
+			// remove the current tab from the stdOut
+			stdOut.update((_currentStdOut) => {
+				if (_currentStdOut.length > 1) {
+					const index = $currentStdOut.index;
+					_currentStdOut.splice(index, 1);
+				}
+				return _currentStdOut;
+			});
+
 			// remove current tab if it's not the last and shift all table indexes set active tab to the previous tab
 			tabs.update((currentTabs) => {
 				if (currentTabs.length > 1) {
@@ -54,15 +65,10 @@
 				}
 				return currentTabs;
 			});
-			// remove the current tab from the stdOut
-			stdOut.update((_currentStdOut) => {
-				if (_currentStdOut.length > 1) {
-					const index = $currentStdOut.index;
-					_currentStdOut.splice(index, 1);
-				}
-				return _currentStdOut;
-			});
 		}
+
+		const stdOutElement = document.getElementById('stdOut')!;
+		stdOutElement.scrollTop = stdOutElement.scrollHeight;
 
 		promptText.set('');
 	}
