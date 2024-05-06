@@ -1,10 +1,31 @@
-<div class="opacity-90">
-	Hi, I'm Paul. I'm based in the East of England and currently work as a Senior Software Engineer at
-	the Football Association, building applications to help England teams succeed. I love writing code
-	and enjoy experimenting with new tools and technologies. Currently, I'm working with Svelte,
-	TypeScript, Go, and TailwindCSS. I have a particular passion for building for the cloud and am a
-	big fan of the serverless paradigm. I also have a keen interest in the world of DevOps and CI/CD.
-	When I'm not coding, I enjoy spending time with my family, watching football, and, much less
-	frequently, playing video games. If you'd like to get in touch, feel free to shoot me an email
-	here or connect with me on LinkedIn.
+<div class="opacity-90 flex flex-col gap-1">
+	<p>
+		Hi, I'm Paul Dolden. I'm a developer based in the East of England and currently work as a Senior
+		Software Engineer at <a href="https://thefa.com" class="underline text-pGreen"
+			>The Football Association</a
+		>, building applications to help England teams succeed.
+	</p>
+	<p>I love writing code and enjoy experimenting with new tools and technologies.</p>
+	<p>
+		Currently, I'm working with:
+		<a href="https://svelte.dev/" class="underline text-pGreen">Svelte</a>,
+		<a href="https://www.typescriptlang.org/" class="underline text-pGreen">TypeScript</a>,
+		<a href="https://go.dev/" class="underline text-pGreen">Go</a>, and
+		<a href="https://tailwindcss.com/" class="underline text-pGreen">TailwindCSS</a>.
+	</p>
+	<p>
+		I have a particular passion for building for the cloud and am a big fan of the serverless
+		paradigm. I also have a keen interest in the world of
+		<a href="https://dora.dev" class="underline text-pGreen">DevOps</a>
+		and CI/CD.
+	</p>
+	<p>
+		When I'm not coding, I enjoy spending time with my family, watching football, and, much less
+		frequently, playing video games.
+	</p>
+	<p>
+		If you'd like to get in touch, feel free to shoot me an email
+		<a href="mailto:paul@dolden.co.uk" class="underline text-pGreen">here</a> or connect with me on
+		<a href="https://linkedin.com/in/pauldolden" class="underline text-pGreen">LinkedIn</a>.
+	</p>
 </div>
