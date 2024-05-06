@@ -14,14 +14,21 @@
 			ctrlBPressed = true;
 		} else if (event.key === 'Enter') {
 			handleEnter();
+			upPressed = false;
+			downPressed = false;
+			ctrlBPressed = false;
 		} else if (event.key === 'ArrowUp') {
 			handleArrowUp();
+			downPressed = false;
+			ctrlBPressed = false;
 		} else if (event.key === 'ArrowDown') {
 			handleArrowDown();
+			upPressed = false;
+			ctrlBPressed = false;
 		} else if (ctrlBPressed) {
 			handleCtrlBCommands(event);
-		} else {
-			resetFlags();
+			upPressed = false;
+			downPressed = false;
 		}
 	}
 
@@ -39,7 +46,7 @@
 
 		// Accepted Commands go here
 		if ($promptText === 'clear') {
-			const index = $currentStdOut.index;
+			const index = $currentStdOut!.index;
 			stdOut.update((currentStdOut) => {
 				currentStdOut[index].commands = [];
 				return currentStdOut;
@@ -50,7 +57,7 @@
 			// remove the current tab from the stdOut
 			stdOut.update((_currentStdOut) => {
 				if (_currentStdOut.length > 1) {
-					const index = $currentStdOut.index;
+					const index = $currentStdOut!.index;
 					_currentStdOut.splice(index, 1);
 				}
 				return _currentStdOut;
@@ -82,16 +89,25 @@
 				// If we've reached the end of the history, wrap around or stop incrementing.
 				newIndex = 0; // Wrap to the start of the history if desired, or you can disable wrapping by removing this line.
 			}
-			promptText.set($history[newIndex]);
+			const newPrompt = $history[newIndex];
+			promptText.set(newPrompt);
 			historyIndex.set(newIndex);
 		} else {
 			// The first press of arrow up sets to the most recent history (index 0) if any history exists.
 			if ($history.length > 0) {
-				promptText.set($history[0]);
+				const recentPrompt = $history[0];
+				promptText.set(recentPrompt);
 				historyIndex.set(0);
 			}
+			upPressed = true; // Mark that the up arrow has been pressed.
 		}
-		upPressed = true; // Mark that the up arrow has been pressed.
+
+		// Request animation frame to set the cursor position after the prompt text has been updated
+		requestAnimationFrame(() => {
+			const promptInput = document.getElementById('promptText') as HTMLInputElement;
+			const length = promptInput.value.length;
+			promptInput.setSelectionRange(length, length);
+		});
 	}
 
 	function handleArrowDown(): void {
@@ -151,12 +167,6 @@
 				}
 				break;
 		}
-		resetFlags();
-	}
-
-	function resetFlags(): void {
-		ctrlBPressed = false;
-		upPressed = false;
 	}
 
 	function isNumber(key: string): boolean {
