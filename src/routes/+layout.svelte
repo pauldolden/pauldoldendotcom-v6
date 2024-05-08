@@ -31,7 +31,7 @@
 </svelte:head>
 
 <!-- Main container with full screen height and appropriate overflow handling -->
-<main class="h-screen flex flex-col overflow-hidden">
+<main class="h-dvh flex flex-col overflow-hidden">
 	<!-- Scrollable StdOut section with explicit height control -->
 	<section id="stdOut" class="flex-1 overflow-auto text-white font-jbm">
 		<StdOut>
