@@ -20,6 +20,7 @@
 			bind:value={$promptText}
 			id="promptText"
 			type="text"
+			on:input={() => ($promptText = $promptText.toLowerCase())}
 		/>
 	</div>
 </section>
