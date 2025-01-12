@@ -1,11 +1,13 @@
 <div class="opacity-90 flex flex-col gap-1">
 	<p>
-		Hi, I'm Paul Dolden. I'm a developer based in the East of England, currently working as a Senior
-		Software Engineer at <a href="https://thefa.com" class="underline text-tmux" target="_blank"
-			>The Football Association</a
-		>, building applications that help England teams succeed.
+		Hi, I'm Paul Dolden. I'm a developer based in the South East of England, currently working as a
+		Senior Software Engineer at <a
+			href="https://thefa.com"
+			class="underline text-tmux"
+			target="_blank">The Football Association</a
+		>, building applications to help England teams succeed.
 	</p>
-	<p>I enjoy writing code and experimenting with new tools and technologies.</p>
+	<p>I enjoy writing code and experimenting with new tools, technologies and paradigms.</p>
 	<p>
 		Right now, I'm working with:
 		<a href="https://svelte.dev/" class="underline text-tmux" target="_blank">Svelte</a>,
@@ -16,8 +18,10 @@
 		<a href="https://tailwindcss.com/" class="underline text-tmux" target="_blank">TailwindCSS</a>.
 		I'm also exploring
 		<a href="https://www.rust-lang.org/" class="underline text-tmux" target="_blank">Rust</a>
-		and
+		,
 		<a href="https://webassembly.org/" class="underline text-tmux" target="_blank">WebAssembly</a>.
+		and
+		<a href="https://www.inkandswitch.com/local-first/">Local-first development</a>
 	</p>
 	<p>
 		I enjoy building for the cloud, working with serverless technologies, containers, and
