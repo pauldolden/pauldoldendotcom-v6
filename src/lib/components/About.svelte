@@ -21,7 +21,9 @@
 		,
 		<a href="https://webassembly.org/" class="underline text-tmux" target="_blank">WebAssembly</a>.
 		and
-		<a href="https://www.inkandswitch.com/local-first/">Local-first development</a>
+		<a href="https://www.inkandswitch.com/local-first/" class="underline text-tmu"
+			>Local-first development</a
+		>
 	</p>
 	<p>
 		I enjoy building for the cloud, working with serverless technologies, containers, and
