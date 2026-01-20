@@ -14,7 +14,7 @@
 		<div>[0]</div>
 		<nav class="flex md:flex-row flex-wrap gap-3">
 			{#each $tabs as tab, index}
-				<button class="tab" on:click={() => ($activeTab = index)}>
+				<button class="tab" onclick={() => ($activeTab = index)}>
 					{index}:{tab}{index === $activeTab ? '*' : ''}
 				</button>
 			{/each}

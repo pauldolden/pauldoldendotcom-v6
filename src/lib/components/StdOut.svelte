@@ -11,7 +11,7 @@
 </script>
 
 <label for="promptText" class="flex flex-col justify-end px-2">
-	{#each $currentStdOut.commands as command}
+	{#each $currentStdOut?.commands ?? [] as command}
 		<div class="py-2">
 			<PromptText />
 			<div class="flex items-center">

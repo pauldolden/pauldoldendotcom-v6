@@ -6,6 +6,7 @@ type Job = {
 	description: string;
 	url: string;
 	tools: Tool[];
+	image?: string;
 };
 
 type Tool = {
